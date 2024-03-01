@@ -11,8 +11,8 @@ This app predicts the **insurance expenses** type!
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    age= st.sidebar.slider('age',  [1,  0, 10, 15, 14, 13, 28, 19, 42,  7, 44,  5, 38,  9, 34, 12, 16, 41, 45, 37,  4,  8, 17,  6, 23, 20, 18,  3, 30, 22, 40, 35, 25, 46, 2, 43, 26, 39, 11, 27, 36, 31, 29, 33, 24, 32, 21])
-    bmi = st.sidebar.slider('bmi',102, 161, 153,  50, 112,  80, 157, 100, 121,  81,  85,  86, 167,
+    age = st.sidebar.slider('age',  [1,  0, 10, 15, 14, 13, 28, 19, 42,  7, 44,  5, 38,  9, 34, 12, 16, 41, 45, 37,  4,  8, 17,  6, 23, 20, 18,  3, 30, 22, 40, 35, 25, 46, 2, 43, 26, 39, 11, 27, 36, 31, 29, 33, 24, 32, 21])
+    bmi = st.sidebar.slider('bmi', [102, 161, 153,  50, 112,  80, 157, 100, 121,  81,  85,  86, 167,
        220, 239,  69, 131,  61, 224, 176, 183, 147, 164, 142, 103,  54,
        151,   4, 186, 179, 109, 106, 187,  28,  32, 190, 221,  89, 189,
         41, 194, 196, 209, 171,  68, 175, 159, 110, 193, 141, 140,  52,
@@ -33,11 +33,11 @@ def user_input_features():
        236, 254, 228,  94, 202,  51, 169,  20, 231,  48, 237, 240, 234,
        245,  34,  65,   6, 272, 268, 250, 252,  25, 195, 261,  11, 222,
         29,  56,  18, 257,  14, 273, 269,  17, 244,  13, 260, 256, 225,
-         8, 274)
-    children = st.sidebar.slider('children', 0, 1, 3, 2, 5, 4)
-    sex = st.sidebar.slider('female', 'male')
-    smoker = st.sidebar.slider('no','yes')
-    region = st.sidebar.slider ('northeast', 'northwest', 'southeast', 'southwest')
+         8, 274])
+    children = st.sidebar.slider('children', [0, 1, 3, 2, 5, 4])
+    sex = st.sidebar.selectbox('female', 'male')
+    smoker = st.sidebar.selectbox('no','yes')
+    region = st.sidebar.selectbox('northeast', 'northwest', 'southeast', 'southwest')
     expenses = st.sidebar.slider ('1005,   57,  306, ...,   32,   91, 1171')
     data = {'age': age,
             'bmi': bmi,
@@ -45,7 +45,7 @@ def user_input_features():
             'sex': sex,
             'smoker': smoker,
             'region': region,
-            'expenses': expenses,}
+            'expenses': expenses}
     features = pd.DataFrame(data, index=[0])
     return features
 
