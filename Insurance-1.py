@@ -45,9 +45,9 @@ def user_input_features():
             'bmi': bmi,
             'children': children
             'sex': sex
-            'smoker':smoker
-            'region':region
-            'expenses':expenses}
+            'smoker': smoker
+            'region': region
+            'expenses': expenses}
     features = pd.DataFrame(data, index=[0])
     return features
 
