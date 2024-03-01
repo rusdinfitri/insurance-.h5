@@ -43,11 +43,11 @@ def user_input_features():
     expenses = st.sidebar.slider ('1005,   57,  306, ...,   32,   91, 1171')
     data = {'age': age,
             'bmi': bmi,
-            'children': children
-            'sex': sex
-            'smoker': smoker
-            'region': region
-            'expenses': expenses}
+            'children': children,
+            'sex': sex,
+            'smoker': smoker,
+            'region': region,
+            'expenses': expenses,}
     features = pd.DataFrame(data, index=[0])
     return features
 
