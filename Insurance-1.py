@@ -41,7 +41,7 @@ def user_input_features():
     smoker = st.sidebar.slider('no','yes')
     region = st.sidebar.slider ('northeast', 'northwest', 'southeast', 'southwest')
     expenses = st.sidebar.slider ('1005,   57,  306, ...,   32,   91, 1171')
-    data = { 'age': age,
+    data = {'age': age,
             'bmi': bmi,
             'children': children
             'sex': sex
